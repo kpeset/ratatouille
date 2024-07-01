@@ -1,0 +1,28 @@
+main > h2 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  text-align: center;
+  background-color: white;
+  padding: 4rem 0;
+}
+
+main > .random_recipe {
+  padding: 2rem;
+  text-align: center;
+  min-height: 50vh;
+}
+
+main .cta_random_recipe {
+  margin: 0 auto;
+  background-color: #7bd5d5;
+  color: black;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+main .cta_random_recipe:hover {
+  background-color: rgb(73, 166, 166);
+}

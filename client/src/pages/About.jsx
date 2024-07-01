@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <>
+    <section>
       <h1>À propos de Ratatouille</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae laborum
@@ -8,6 +8,6 @@ export default function About() {
         libero sunt itaque modi. Placeat tempore assumenda, quisquam at id
         accusantium.
       </p>
-    </>
+    </section>
   );
 }

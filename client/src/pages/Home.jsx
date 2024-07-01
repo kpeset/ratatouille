@@ -15,21 +15,24 @@ export default function Home() {
 
   return (
     <>
-      <h1>Ratatouille</h1>
-      <p>Bienvenue sur notre site qui contient des milliards de recettes !</p>
+      <h2>Simple recipes made for real, actual, everyday life.</h2>
 
       {/* Si je n'ai pas cliqué sur le bouton, je veux afficher "veuillez cliquer
         sur le bouton" sinon, je veux afficher la recette provenant de l'api */}
       <section className="random_recipe">
+        <button
+          className="cta_random_recipe"
+          type="button"
+          onClick={getRandomRecipe}
+        >
+          Générer une recette
+        </button>
         {!recipe ? (
-          <h3>Cliquez sur le bouton</h3>
+          <h3>Cliquez sur le bouton pour générer une recette</h3>
         ) : (
           <RecipeCard recipe={recipe} />
         )}
       </section>
-      <button type="button" onClick={getRandomRecipe}>
-        Générer une recette
-      </button>
     </>
   );
 }

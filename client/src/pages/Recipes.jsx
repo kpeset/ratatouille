@@ -1,6 +1,6 @@
 export default function Recipes() {
   return (
-    <>
+    <section>
       <h1>Nos recettes</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odit
@@ -8,6 +8,6 @@ export default function Recipes() {
         fuga quibusdam? Neque doloremque quia repellat recusandae optio quam
         maxime aperiam perspiciatis!
       </p>
-    </>
+    </section>
   );
 }

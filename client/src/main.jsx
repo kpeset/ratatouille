@@ -7,6 +7,12 @@ import Recipes from "./pages/Recipes";
 import RecipeDetails from "./pages/RecipeDetails";
 import About from "./pages/About";
 
+import "./styles/app.css";
+import "./styles/navbar.css";
+import "./styles/footer.css";
+import "./styles/home.css";
+import "./styles/recipeCard.css";
+
 const router = createBrowserRouter([
   {
     element: <App />,

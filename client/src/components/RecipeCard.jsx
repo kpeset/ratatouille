@@ -6,8 +6,7 @@ export default function RecipeCard({ recipe }) {
     <article>
       <img src={recipe.strMealThumb} alt={recipe.strMeal} />
       <h2>{recipe.strMeal}</h2>
-      <p>{recipe.strArea}</p>
-      <p>{recipe.strCategory}</p>
+      <p>{recipe.strArea} food</p>
     </article>
   );
 }
@@ -17,6 +16,5 @@ RecipeCard.propTypes = {
     strMealThumb: PropTypes.string.isRequired,
     strMeal: PropTypes.string.isRequired,
     strArea: PropTypes.string.isRequired,
-    strCategory: PropTypes.string.isRequired,
   }).isRequired,
 };

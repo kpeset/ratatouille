@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid #7bd5d5;
+}
+
+header > nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header > .logo > h2 {
+  font-family: "Arapey", serif;
+  font-weight: 600;
+}
+
+header > .logo > h2 {
+  color: #107777;
+  font-size: 2rem;
+}
+
+header > .logo > h3 {
+  color: #229e60;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding-left: 1rem;
+}
+
+header a {
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
