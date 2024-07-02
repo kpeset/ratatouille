@@ -6,6 +6,15 @@ article {
   margin: 0 auto;
 }
 
-article > img {
+article img {
   width: 100%;
+}
+
+article > a {
+  cursor: pointer;
+  color: rgb(73, 73, 73);
+}
+
+article > a:hover {
+  color: black;
 }

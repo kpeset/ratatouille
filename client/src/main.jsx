@@ -9,13 +9,14 @@ import Category from "./pages/Category";
 import About from "./pages/About";
 import Area from "./pages/Area";
 
-import { getAreas, getCategories } from "./services/request";
+import { getAreas, getCategories, getRecipeById } from "./services/request";
 
 import "./styles/app.css";
 import "./styles/navbar.css";
 import "./styles/footer.css";
 import "./styles/home.css";
 import "./styles/recipeCard.css";
+import "./styles/recipeDetails.css";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
       {
         path: "/recipes/:id",
         element: <RecipeDetails />,
+        loader: ({ params }) => getRecipeById(params.id),
       },
       {
         path: "/about",

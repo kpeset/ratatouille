@@ -1,16 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 export default function RecipeDetails() {
-  const { id } = useParams();
+  const meal = useLoaderData();
+
+  console.info(meal);
 
   return (
     <section>
-      <h1>Le détail de ma recette - numéro {id}</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut beatae
-        voluptate quibusdam aliquam vitae earum nam nemo eos laborum voluptates
-        aperiam minus a esse nostrum, voluptas officiis, vero magni quis?
-      </p>
+      <h2>{meal.strMeal}</h2>
+      <div className="recipe_content">
+        <img src={meal.strMealThumb} alt={meal.strMeal} />
+        <p style={{ whiteSpace: "pre-wrap" }}>{meal.strInstructions}</p>
+      </div>
     </section>
   );
 }
