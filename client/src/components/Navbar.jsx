@@ -10,6 +10,8 @@ export default function Navbar() {
       <nav>
         <Link to="/">Accueil</Link>
         <Link to="/recipes">Nos recettes</Link>
+        <Link to="/area">Cuisine du Monde</Link>
+        <Link to="/category">Nos catégories</Link>
         <Link to="/about">À propos de nous</Link>
       </nav>
     </header>

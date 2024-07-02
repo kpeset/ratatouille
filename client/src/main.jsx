@@ -5,7 +5,11 @@ import App from "./App";
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import RecipeDetails from "./pages/RecipeDetails";
+import Category from "./pages/Category";
 import About from "./pages/About";
+import Area from "./pages/Area";
+
+import { getAreas, getCategories } from "./services/request";
 
 import "./styles/app.css";
 import "./styles/navbar.css";
@@ -32,6 +36,16 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/category",
+        element: <Category />,
+        loader: getCategories,
+      },
+      {
+        path: "/area",
+        element: <Area />,
+        loader: getAreas,
       },
     ],
   },
