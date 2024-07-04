@@ -20,3 +20,10 @@ export function getRecipeById(id) {
     .then((response) => response.data.meals[0])
     .catch((error) => console.error(error));
 }
+
+export function getMealsByName(search) {
+  return axios
+    .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+    .then((response) => response.data.meals)
+    .catch((error) => console.error(error));
+}

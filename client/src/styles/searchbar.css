@@ -1,0 +1,15 @@
+.search_bar {
+  padding: 2rem;
+}
+
+.search_bar button {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search_bar input {
+  padding: 1rem 2rem;
+  min-width: 24rem;
+}

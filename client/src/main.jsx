@@ -8,8 +8,14 @@ import RecipeDetails from "./pages/RecipeDetails";
 import Category from "./pages/Category";
 import About from "./pages/About";
 import Area from "./pages/Area";
+import Result from "./pages/Result";
 
-import { getAreas, getCategories, getRecipeById } from "./services/request";
+import {
+  getAreas,
+  getCategories,
+  getRecipeById,
+  getMealsByName,
+} from "./services/request";
 
 import "./styles/app.css";
 import "./styles/navbar.css";
@@ -17,6 +23,7 @@ import "./styles/footer.css";
 import "./styles/home.css";
 import "./styles/recipeCard.css";
 import "./styles/recipeDetails.css";
+import "./styles/searchbar.css";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +55,11 @@ const router = createBrowserRouter([
         path: "/area",
         element: <Area />,
         loader: getAreas,
+      },
+      {
+        path: "/result/:search",
+        element: <Result />,
+        loader: ({ params }) => getMealsByName(params.search),
       },
     ],
   },
