@@ -3,8 +3,6 @@ import { useLoaderData } from "react-router-dom";
 export default function RecipeDetails() {
   const meal = useLoaderData();
 
-  console.info(meal);
-
   return (
     <section>
       <h2>{meal.strMeal}</h2>

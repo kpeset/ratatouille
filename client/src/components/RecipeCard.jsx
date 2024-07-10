@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 export default function RecipeCard({ recipe }) {
-  console.info("Recipe depuis RecipeCard : ", recipe);
   return (
     <article>
       <img src={recipe.strMealThumb} alt={recipe.strMeal} />
@@ -16,7 +15,7 @@ RecipeCard.propTypes = {
   recipe: PropTypes.shape({
     strMealThumb: PropTypes.string.isRequired,
     strMeal: PropTypes.string.isRequired,
-    strArea: PropTypes.string.isRequired,
+    strArea: PropTypes.string,
     idMeal: PropTypes.string.isRequired,
   }).isRequired,
 };

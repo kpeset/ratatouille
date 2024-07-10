@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 
 export default function Area() {
   const meals = useLoaderData();
@@ -7,7 +7,9 @@ export default function Area() {
     <section>
       <h1>Choose a location</h1>
       {meals.map((meal) => (
-        <p key={meal.strArea}>{meal.strArea}</p>
+        <Link to={`/area/${meal.strArea}`} key={meal.strArea}>
+          {meal.strArea}
+        </Link>
       ))}
     </section>
   );

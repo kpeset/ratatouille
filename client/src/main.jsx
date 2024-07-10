@@ -9,12 +9,16 @@ import Category from "./pages/Category";
 import About from "./pages/About";
 import Area from "./pages/Area";
 import Result from "./pages/Result";
+import CategoryDetails from "./pages/CategoryDetails";
+import AreaDetails from "./pages/AreaDetails";
 
 import {
   getAreas,
-  getCategories,
   getRecipeById,
   getMealsByName,
+  getCategories,
+  getMealsByCategory,
+  getMealsByArea,
 } from "./services/request";
 
 import "./styles/app.css";
@@ -52,9 +56,19 @@ const router = createBrowserRouter([
         loader: getCategories,
       },
       {
+        path: "/category/:cat",
+        element: <CategoryDetails />,
+        loader: ({ params }) => getMealsByCategory(params.cat),
+      },
+      {
         path: "/area",
         element: <Area />,
         loader: getAreas,
+      },
+      {
+        path: "/area/:location",
+        element: <AreaDetails />,
+        loader: ({ params }) => getMealsByArea(params.location),
       },
       {
         path: "/result/:search",
